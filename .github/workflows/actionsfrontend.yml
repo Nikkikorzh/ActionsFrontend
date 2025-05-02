@@ -33,7 +33,7 @@ jobs:
         with:
           registry: ghcr.io
           username: nikkikorzh
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: ${{ secrets.DOCKER_TOKEN }}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
@@ -41,3 +41,4 @@ jobs:
           context: .
           push: true
           tags: ghcr.io/nikkikorzh/actionsfrontend
+
